@@ -1,0 +1,130 @@
+/* 1. Use a more-intuitive box-sizing model */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* 2. Remove default margin */
+* {
+  margin: 0;
+}
+
+body {
+  /* 4. Add accessible line-height */
+  line-height: 1.5;
+  /* 5. Improve text rendering */
+  -webkit-font-smoothing: antialiased;
+  font-family: "roboto", sans-serif;
+}
+
+/* 6. Improve media defaults */
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+/* 7. Inherit fonts for form controls */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* 8. Avoid text overflows */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+/* 9. Improve line wrapping */
+p {
+  text-wrap: pretty;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  text-wrap: balance;
+}
+
+/* site styles */
+.container {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  max-width: 768px;
+}
+
+.form {
+  display: grid;
+  grid-auto-flow: row;
+  gap: 1rem;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  margin-bottom: 2rem;
+}
+
+.form .calculateButton {
+  grid-column: span 2;
+  padding: 8px;
+  text-transform: uppercase;
+}
+
+.input {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.input:required {
+  border-color: red;
+}
+
+.navigation {
+  padding: 1rem;
+  margin-bottom: 2rem;
+  border-bottom: 2px solid black;
+
+  h1 {
+    font-size: 1rem;
+  }
+}
+
+.calculation {
+  display: grid;
+  grid-auto-flow: row;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 1rem;
+}
+
+.calculationCard {
+  border: 1px solid rgba(0, 0, 0, 40%);
+  border-radius: 4px;
+  padding: 8px;
+  min-height: 102px;
+
+  .calculationHeader {
+    font-weight: 600;
+  }
+
+  span {
+    font-size: 2.5rem;
+    font-weight: 300;
+  }
+}
