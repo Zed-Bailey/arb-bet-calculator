@@ -31,7 +31,7 @@
             id="betfair_commission"
             required
             type="number"
-            value="6"
+            value="8"
             step="0.01"
           />
         </div>
@@ -55,28 +55,33 @@
             step="0.01"
           />
         </div>
+
         <button class="calculateButton" type="submit">Calculate</button>
       </form>
 
       <div class="calculation">
         <div class="calculationCard">
-          <p class="calculationHeader">profit</p>
+          <p class="calculationHeader">Profit $</p>
           <span id="profit"></span>
         </div>
 
         <div class="calculationCard">
-          <p class="calculationHeader">ROI</p>
+          <p class="calculationHeader">ROI %</p>
           <span id="roi"></span>
         </div>
 
         <div class="calculationCard">
-          <p class="calculationHeader">lay stake</p>
+          <p class="calculationHeader">Lay Stake</p>
           <span id="lay_stake"></span>
         </div>
 
         <div class="calculationCard">
-          <p class="calculationHeader">lay liability</p>
+          <p class="calculationHeader">Lay Liability</p>
           <span id="lay_liability"></span>
+        </div>
+        <div class="calculationCard">
+          <p class="calculationHeader">Total Investment</p>
+          <span id="total_investment"></span>
         </div>
       </div>
     </main>

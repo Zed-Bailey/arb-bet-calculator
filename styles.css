@@ -16,6 +16,7 @@ body {
   /* 5. Improve text rendering */
   -webkit-font-smoothing: antialiased;
   font-family: "roboto", sans-serif;
+  background-image: url("./img/background_grain.svg");
 }
 
 /* 6. Improve media defaults */
@@ -85,14 +86,26 @@ h6 {
   text-transform: uppercase;
 }
 
+.form .calculateButton:hover {
+  cursor: pointer;
+}
+
 .input {
   display: flex;
   flex-direction: column;
   gap: 4px;
 }
 
-.input:required {
-  border-color: red;
+.input input {
+  padding: 4px 8px;
+  border-radius: 4px;
+  border: 1px solid black;
+  font-size: 1.125rem;
+}
+
+.input label {
+  font-size: 0.875rem;
+  font-weight: 600;
 }
 
 .navigation {
@@ -118,6 +131,9 @@ h6 {
   border-radius: 4px;
   padding: 8px;
   min-height: 102px;
+  background-color: white;
+  transition: transform 180ms ease-in-out;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 10%);
 
   .calculationHeader {
     font-weight: 600;
@@ -127,4 +143,8 @@ h6 {
     font-size: 2.5rem;
     font-weight: 300;
   }
+}
+
+.calculationCard:hover {
+  transform: scale(103%);
 }
