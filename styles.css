@@ -71,6 +71,19 @@ h6 {
   max-width: 768px;
 }
 
+.col-2 {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 1fr;
+}
+
+.savedBetList {
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 0;
+}
+
 .form {
   display: grid;
   grid-auto-flow: row;
@@ -147,4 +160,9 @@ h6 {
 
 .calculationCard:hover {
   transform: scale(103%);
+}
+
+.saveAndTrackButton {
+  width: 100%;
+  margin-top: 32px;
 }

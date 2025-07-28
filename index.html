@@ -18,71 +18,81 @@
     <nav class="container navigation">
       <h1>Zeds Arb bet calculator</h1>
     </nav>
-    <main class="container">
-      <form class="form" id="calculateForm">
-        <div class="input">
-          <label for="stake">Bookmaker Stake</label>
-          <input name="stake" id="stake" required type="number" step="0.01" />
-        </div>
-        <div class="input">
-          <label for="betfair_commission">Betfair Commission</label>
-          <input
-            name="betfair_commission"
-            id="betfair_commission"
-            required
-            type="number"
-            value="8"
-            step="0.01"
-          />
-        </div>
-        <div class="input">
-          <label for="betfair_lay_odds">Betfair lay odds</label>
-          <input
-            name="betfair_lay_odds"
-            id="betfair_lay_odds"
-            required
-            type="number"
-            step="0.01"
-          />
-        </div>
-        <div class="input">
-          <label for="bookmaker_back_odds">Bookmaker back odds</label>
-          <input
-            name="bookmaker_back_odds"
-            id="bookmaker_back_odds"
-            required
-            type="number"
-            step="0.01"
-          />
-        </div>
+    <main class="container col-2">
+      <div class="savedBets">
+        <h2>Saved bets</h2>
+        <ul id="savedBets" class="savedBetList"></ul>
+        <div id="metrics"></div>
+      </div>
 
-        <button class="calculateButton" type="submit">Calculate</button>
-      </form>
+      <div>
+        <form class="form" id="calculateForm">
+          <div class="input">
+            <label for="stake">Bookmaker Stake</label>
+            <input name="stake" id="stake" required type="number" step="0.01" />
+          </div>
+          <div class="input">
+            <label for="betfair_commission">Betfair Commission</label>
+            <input
+              name="betfair_commission"
+              id="betfair_commission"
+              required
+              type="number"
+              value="8"
+              step="0.01"
+            />
+          </div>
+          <div class="input">
+            <label for="betfair_lay_odds">Betfair lay odds</label>
+            <input
+              name="betfair_lay_odds"
+              id="betfair_lay_odds"
+              required
+              type="number"
+              step="0.01"
+            />
+          </div>
+          <div class="input">
+            <label for="bookmaker_back_odds">Bookmaker back odds</label>
+            <input
+              name="bookmaker_back_odds"
+              id="bookmaker_back_odds"
+              required
+              type="number"
+              step="0.01"
+            />
+          </div>
 
-      <div class="calculation">
-        <div class="calculationCard">
-          <p class="calculationHeader">Profit $</p>
-          <span id="profit"></span>
-        </div>
+          <button class="calculateButton" type="submit">Calculate</button>
+        </form>
+        <div class="calculation">
+          <div class="calculationCard">
+            <p class="calculationHeader">Profit $</p>
+            <span id="profit"></span>
+          </div>
 
-        <div class="calculationCard">
-          <p class="calculationHeader">ROI %</p>
-          <span id="roi"></span>
-        </div>
+          <div class="calculationCard">
+            <p class="calculationHeader">ROI %</p>
+            <span id="roi"></span>
+          </div>
 
-        <div class="calculationCard">
-          <p class="calculationHeader">Lay Stake</p>
-          <span id="lay_stake"></span>
-        </div>
+          <div class="calculationCard">
+            <p class="calculationHeader">Lay Stake</p>
+            <span id="lay_stake"></span>
+          </div>
 
-        <div class="calculationCard">
-          <p class="calculationHeader">Lay Liability</p>
-          <span id="lay_liability"></span>
+          <div class="calculationCard">
+            <p class="calculationHeader">Lay Liability</p>
+            <span id="lay_liability"></span>
+          </div>
+          <div class="calculationCard">
+            <p class="calculationHeader">Total Investment</p>
+            <span id="total_investment"></span>
+          </div>
         </div>
-        <div class="calculationCard">
-          <p class="calculationHeader">Total Investment</p>
-          <span id="total_investment"></span>
-        </div>
+        <button onclick="addAndTrackBet()" class="saveAndTrackButton">
+          Save and Track bet
+        </button>
       </div>
     </main>
   </body>
